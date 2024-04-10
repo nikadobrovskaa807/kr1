@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "style.css" %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+</head>
+<body>
+    <header>
+        <h1>Пожертвования</h1>
+    </header>
+    <main>
+        <table class="table">
+            <tr>
+                <th>Сумма пожертования</th>
+                <th>Дата</th>
+                <th>Организация</th>
+		    </tr>
+          {% for row1, row2, row3 in test %}
+            <tr>
+                <td> {{ row1 }}</td>
+                <td> {{ row2 }}</td>
+                <td> {{ row3 }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+
+    </main>
+    <footer>
+        <p>© 2024 Our Real Estate Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
